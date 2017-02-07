@@ -19,9 +19,9 @@ public class Contact implements Serializable, Cloneable {
 
     private String firstName = "";
     private String lastName = "";
-    private String phone = "";
-    private String email = "";
-    private Date birthDate;
+    private String task = "";
+    private Date startdate;
+    private Date expectedenddate;
 
     public Long getId() {
         return id;
@@ -46,31 +46,32 @@ public class Contact implements Serializable, Cloneable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-    public String getPhone() {
-        return phone;
+    
+    public String getTask() {
+        return task;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTask(String task) {
+        this.task = task;
+    }
+    
+    public Date getStartdate() {
+        return startdate;
     }
 
-    public String getEmail() {
-        return email;
+    public void setStartdate(Date startdate) {
+        this.startdate = startdate;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public Date getExpectedenddate() {
+        return expectedenddate;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public void setExpectedenddate(Date expectedenddate) {
+        this.expectedenddate = expectedenddate;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
-
+    
     @Override
     public Contact clone() throws CloneNotSupportedException {
         try {
@@ -83,8 +84,8 @@ public class Contact implements Serializable, Cloneable {
     @Override
     public String toString() {
         return "Contact{" + "id=" + id + ", firstName=" + firstName
-                + ", lastName=" + lastName + ", phone=" + phone + ", email="
-                + email + ", birthDate=" + birthDate + '}';
+                + ", lastName=" + lastName + ", task=" + task + ", startdate="
+                + startdate + ", expectedenddate=" + expectedenddate + '}';
     }
 
 }
